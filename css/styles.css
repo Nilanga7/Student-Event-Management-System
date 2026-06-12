@@ -1,0 +1,416 @@
+
+
+:root {
+    --primary-color: #39ff14;
+    --primary-green: #39ff14;
+    --primary-aqua: #00ff7f;
+    --dark-green: #00c200;
+    --dark-aqua: #00b36b;
+    --light-green: #eafff0;
+    --light-aqua: #f2fff6;
+    --gradient-start: #39ff14;
+    --gradient-end: #00ff7f;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url(https://www.dgfivei.com/wp-content/uploads/2023/02/WEB-TEMP-01-1080x1920-ITUM-EX-03.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 150px 0;
+    position: relative;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(93, 88, 88, 0.2);
+    z-index: 1;
+}
+
+.hero-section .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.hero-section .btn-outline-primary {
+    color: #000000;
+    border-color: #000000;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero-section h1{
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+}
+
+.hero-section p {
+    -webkit-text-stroke: 0.2px #ffffff;
+    color: #ffffff;
+    text-decoration: solid;
+    text-shadow: 2px 2px 6px rgba(29, 100, 51, 0.9);
+}
+
+/* Feature Cards */
+.feature-card {
+    border: none;
+    border-radius: 15px;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #0b3d0b, #1a5a1a);
+    color: #fff;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #064006, #0f7f0f);
+}
+
+.feature-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotate(10deg) scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.feature-card .card-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card .card-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+/*Quick action*/
+.quick-actions-card {
+    border-radius: 14px;
+    background: #f7faff;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.quick-actions-header {
+    background: #3a0ca3;
+    border-radius: 14px 14px 0 0;
+}
+
+.quick-actions-title {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.quick-actions-body {
+    padding: 22px;
+}
+
+.action-btn {
+    padding: 10px 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.action-add {
+    background-color: #2ecc71 !important;
+}
+
+.action-view {
+    background-color: #17a2b8 !important;
+}
+
+.action-create {
+    background-color: #e74c3c !important;
+}
+
+.action-public {
+    background-color: #6c757d !important;
+}
+
+/*Recent Events*/
+.recent-events-card {
+    background: #f5f8ff !important;
+    border-radius: 14px !important;
+    border: none !important;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.10) !important;
+}
+
+.recent-events-header {
+    background: #4b0082 !important;
+    border-radius: 14px 14px 0 0 !important;
+}
+
+.recent-events-title {
+    font-weight: 600 !important;
+    letter-spacing: .5px !important;
+}
+
+.recent-events-table tbody tr:hover {
+    background-color: #eef3ff !important;
+}
+
+.recent-events-card .action-btn {
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: 0.2s ease !important;
+}
+
+.recent-events-card .action-btn:hover {
+    transform: translateY(-2px) !important;
+}
+
+.recent-events-card .action-edit {
+    background-color: #ffb62e !important;
+    color: #fff !important;
+}
+
+.recent-events-card .action-view-reg {
+    background-color: #1e90ff !important;
+    color: #fff !important;
+}
+
+.recent-events-card .action-delete {
+    background-color: #e63946 !important;
+    color: #fff !important;
+}
+
+/* Event Cards */
+.event-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background: #ffffff;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(255, 223, 0, 0.3), 0 0 20px rgba(255, 223, 0, 0.2);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 12px 25px rgba(255, 223, 0, 0.6),
+        0 0 15px rgba(255, 223, 0, 0.5),
+        0 0 25px rgba(255, 223, 0, 0.4);
+}
+
+.event-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 0 20px 8px rgba(255, 223, 0, 0.3);
+}
+
+.event-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0.75rem 0 0.5rem;
+    background: linear-gradient(90deg, #ffd700, #ffec00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 5px rgba(255, 223, 0, 0.5);
+}
+
+.event-card .card-text {
+    font-size: 1rem;
+    color: #b38f00;
+    line-height: 1.4;
+    text-shadow: 0 0 3px rgba(255, 223, 0, 0.4);
+}
+
+.stat-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: var(--dark-green);
+    color: white;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 2rem;
+    color: black;
+}
+
+.navbar .nav-link {
+    color: black !important;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link:hover {
+    color: var(--dark-green) !important;
+}
+
+/* Tables */
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.05);
+    cursor: pointer;
+}
+
+/* Alerts */
+.alert {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Shadows */
+.shadow {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2e59d9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .alert {
+    animation: fadeIn 0.5s ease;
+}
